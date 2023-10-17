@@ -1,0 +1,17 @@
+version: '3'
+services:
+    front-end:
+        container_name: frontend
+        image: bharathsharath/frontend
+        ports:
+            - 8888:3000
+    mongodb:
+        container_name: mongo-services
+        image: mongo
+        ports:
+            - 27017:27017
+    back-end:
+        container_name: backend
+        image: bharathsharath/backend
+        ports:
+          - 9999:8081
